@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Secret_Messages" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,127 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-RV-FOI">
+                                <rect key="frame" x="0.0" y="136" width="375" height="531"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text to Encrypt" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuE-EE-BfE">
+                                        <rect key="frame" x="43" y="8" width="288" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfl-Lg-Ow2">
+                                        <rect key="frame" x="43" y="46" width="288" height="30"/>
+                                        <state key="normal" title="Encrypt Text"/>
+                                        <connections>
+                                            <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O99-26-vn4"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8cO-xE-u7o">
+                                        <rect key="frame" x="8" y="84" width="359" height="154"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="154" id="sib-7Z-BnC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text to Decrypt" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NqO-Fb-7Y5">
+                                        <rect key="frame" x="43" y="250" width="288" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgb-ZU-129">
+                                        <rect key="frame" x="43" y="288" width="288" height="30"/>
+                                        <state key="normal" title="Decrypt Text"/>
+                                        <connections>
+                                            <action selector="decryptBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ETH-gn-sww"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97690825668445591" green="0.97690825668445591" blue="0.97690825668445591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NqO-Fb-7Y5" firstAttribute="centerX" secondItem="1ec-RV-FOI" secondAttribute="centerX" id="1WI-1D-yvh"/>
+                                    <constraint firstItem="Xfl-Lg-Ow2" firstAttribute="top" secondItem="GuE-EE-BfE" secondAttribute="bottom" constant="8" id="3V7-XX-idv"/>
+                                    <constraint firstItem="pgb-ZU-129" firstAttribute="top" secondItem="NqO-Fb-7Y5" secondAttribute="bottom" constant="8" id="5Er-yW-QCy"/>
+                                    <constraint firstAttribute="trailing" secondItem="NqO-Fb-7Y5" secondAttribute="trailing" constant="44" id="8c3-rx-oVZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pgb-ZU-129" secondAttribute="trailing" constant="44" id="90D-dk-z8G"/>
+                                    <constraint firstItem="8cO-xE-u7o" firstAttribute="leading" secondItem="1ec-RV-FOI" secondAttribute="leading" constant="8" id="9G7-vF-eEa"/>
+                                    <constraint firstAttribute="trailing" secondItem="GuE-EE-BfE" secondAttribute="trailing" constant="44" id="LOO-ev-vuT"/>
+                                    <constraint firstItem="NqO-Fb-7Y5" firstAttribute="top" secondItem="8cO-xE-u7o" secondAttribute="bottom" constant="12" id="Mqa-xM-lJr"/>
+                                    <constraint firstItem="NqO-Fb-7Y5" firstAttribute="leading" secondItem="1ec-RV-FOI" secondAttribute="leading" constant="43" id="MuX-7z-N21"/>
+                                    <constraint firstItem="pgb-ZU-129" firstAttribute="leading" secondItem="1ec-RV-FOI" secondAttribute="leading" constant="43" id="Rei-fe-Twf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xfl-Lg-Ow2" secondAttribute="trailing" constant="44" id="TL0-ht-32c"/>
+                                    <constraint firstItem="GuE-EE-BfE" firstAttribute="centerX" secondItem="1ec-RV-FOI" secondAttribute="centerX" id="WKx-eE-z45"/>
+                                    <constraint firstItem="Xfl-Lg-Ow2" firstAttribute="leading" secondItem="1ec-RV-FOI" secondAttribute="leading" constant="43" id="YDD-oj-sA7"/>
+                                    <constraint firstItem="8cO-xE-u7o" firstAttribute="top" secondItem="Xfl-Lg-Ow2" secondAttribute="bottom" constant="8" id="iKZ-H4-GR6"/>
+                                    <constraint firstItem="8cO-xE-u7o" firstAttribute="centerX" secondItem="1ec-RV-FOI" secondAttribute="centerX" id="jYk-4b-Zyi"/>
+                                    <constraint firstItem="GuE-EE-BfE" firstAttribute="top" secondItem="1ec-RV-FOI" secondAttribute="top" constant="8" id="lJq-N7-nQ7"/>
+                                    <constraint firstItem="pgb-ZU-129" firstAttribute="centerX" secondItem="1ec-RV-FOI" secondAttribute="centerX" id="oiz-hZ-uI0"/>
+                                    <constraint firstItem="GuE-EE-BfE" firstAttribute="leading" secondItem="1ec-RV-FOI" secondAttribute="leading" constant="43" id="qPv-V0-lpD"/>
+                                    <constraint firstAttribute="trailing" secondItem="8cO-xE-u7o" secondAttribute="trailing" constant="8" id="tQu-9z-x3B"/>
+                                    <constraint firstItem="Xfl-Lg-Ow2" firstAttribute="centerX" secondItem="1ec-RV-FOI" secondAttribute="centerX" id="v3k-lH-qxF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-1f-cM5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secret Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFJ-1x-RlG">
+                                        <rect key="frame" x="8" y="8" width="359" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="PeX-YY-7b0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icG-lB-SvI">
+                                        <rect key="frame" x="337" y="37" width="30" height="43"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                        <state key="normal" title="?">
+                                            <color key="titleColor" white="0.878358686" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hintPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFD-9o-dEw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.58580565039999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KFJ-1x-RlG" firstAttribute="leading" secondItem="ozU-1f-cM5" secondAttribute="leading" constant="8" id="QSu-Ny-N96"/>
+                                    <constraint firstItem="KFJ-1x-RlG" firstAttribute="centerX" secondItem="ozU-1f-cM5" secondAttribute="centerX" id="XRf-uF-eNz"/>
+                                    <constraint firstAttribute="trailing" secondItem="icG-lB-SvI" secondAttribute="trailing" constant="8" id="Zca-Mq-AyZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="KFJ-1x-RlG" secondAttribute="trailing" constant="8" id="fp7-kb-ciZ"/>
+                                    <constraint firstItem="KFJ-1x-RlG" firstAttribute="top" secondItem="ozU-1f-cM5" secondAttribute="top" constant="8" id="hgc-lf-wg1"/>
+                                    <constraint firstItem="icG-lB-SvI" firstAttribute="centerY" secondItem="KFJ-1x-RlG" secondAttribute="centerY" id="rcz-Ea-xZS"/>
+                                    <constraint firstAttribute="height" constant="131" id="sEB-Xc-T7x"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1ec-RV-FOI" secondAttribute="trailing" id="D4u-q2-NRv"/>
+                            <constraint firstItem="ozU-1f-cM5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="POD-LZ-Lcf"/>
+                            <constraint firstAttribute="trailing" secondItem="ozU-1f-cM5" secondAttribute="trailing" id="YOt-dT-xKR"/>
+                            <constraint firstItem="ozU-1f-cM5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aKJ-fX-9CH"/>
+                            <constraint firstItem="1ec-RV-FOI" firstAttribute="top" secondItem="ozU-1f-cM5" secondAttribute="bottom" constant="5" id="drc-WP-9Zn"/>
+                            <constraint firstItem="1ec-RV-FOI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hb1-Cl-pz6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1ec-RV-FOI" secondAttribute="bottom" id="m9T-Er-c9a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn" destination="Xfl-Lg-Ow2" id="4C2-mH-7Yq"/>
+                        <outlet property="decryptTxtField" destination="NqO-Fb-7Y5" id="Ly8-it-3oK"/>
+                        <outlet property="txtField" destination="GuE-EE-BfE" id="B9i-BG-ipw"/>
+                        <outlet property="txtView" destination="8cO-xE-u7o" id="hdQ-wy-bb6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

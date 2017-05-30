@@ -12,6 +12,8 @@
 		687A17001EDBE2AD0024B85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687A16FE1EDBE2AD0024B85B /* Main.storyboard */; };
 		687A17021EDBE2AD0024B85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687A17011EDBE2AD0024B85B /* Assets.xcassets */; };
 		687A17051EDBE2AD0024B85B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687A17031EDBE2AD0024B85B /* LaunchScreen.storyboard */; };
+		68E28BA91EDBF127008D4724 /* Encrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E28BA81EDBF127008D4724 /* Encrypt.swift */; };
+		68E28BAB1EDC6FBB008D4724 /* Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E28BAA1EDC6FBB008D4724 /* Decrypt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		687A17011EDBE2AD0024B85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687A17041EDBE2AD0024B85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		687A17061EDBE2AE0024B85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68E28BA81EDBF127008D4724 /* Encrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encrypt.swift; sourceTree = "<group>"; };
+		68E28BAA1EDC6FBB008D4724 /* Decrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decrypt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		687A16F91EDBE2AD0024B85B /* Secret Messages */ = {
 			isa = PBXGroup;
 			children = (
+				68E28BA81EDBF127008D4724 /* Encrypt.swift */,
 				687A16FA1EDBE2AD0024B85B /* AppDelegate.swift */,
 				687A16FC1EDBE2AD0024B85B /* ViewController.swift */,
 				687A16FE1EDBE2AD0024B85B /* Main.storyboard */,
 				687A17011EDBE2AD0024B85B /* Assets.xcassets */,
 				687A17031EDBE2AD0024B85B /* LaunchScreen.storyboard */,
 				687A17061EDBE2AE0024B85B /* Info.plist */,
+				68E28BAA1EDC6FBB008D4724 /* Decrypt.swift */,
 			);
 			path = "Secret Messages";
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E28BA91EDBF127008D4724 /* Encrypt.swift in Sources */,
 				687A16FD1EDBE2AD0024B85B /* ViewController.swift in Sources */,
 				687A16FB1EDBE2AD0024B85B /* AppDelegate.swift in Sources */,
+				68E28BAB1EDC6FBB008D4724 /* Decrypt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +273,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z3BGLCCPGN;
 				INFOPLIST_FILE = "Secret Messages/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vashishtapps.Secret-Messages";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z3BGLCCPGN;
 				INFOPLIST_FILE = "Secret Messages/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vashishtapps.Secret-Messages";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +314,7 @@
 				687A170B1EDBE2AE0024B85B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
