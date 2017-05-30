@@ -12,7 +12,7 @@ This app has-
 
 2) This app follows MVC Principle, 
 
-3)Keyboard Dismisses on 'Done', 
+3) Keyboard Dismisses on 'Done', 
 
 4) Data-Encapsulation, 
 
@@ -21,7 +21,9 @@ This app has-
 # Bugs (If Any)
 1) If you enter anything other than "Encrypted String" into the Decrypt-Text-field the App will crash with a Fatal Error, reason being the while loop that converts hex into String crashes.
 
-Fix:- 1) Catching the error in a try-catch closure. (Better and convinient Fix.)
+Fix:- 
+
+1) Catching the error in a try-catch closure. (Better and convinient Fix.)
 
 2) Avoiding the Error by using Conditionals (If-Else) and allowing only the Encrypted data to be used in the decrypt-text-field.
 
